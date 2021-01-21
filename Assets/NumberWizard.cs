@@ -27,12 +27,14 @@ public class NumberWizard : MonoBehaviour
         {
             Debug.Log("Up Arrow Key was pressed.");
             min = guess;
+            guess = (max + min) / 2;
             Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Down arrow was pressed.");
             max = guess;
+            guess = (max + min) / 2;
             Debug.Log(guess);
         }
         else if (Input.GetKeyDown(KeyCode.Return))
