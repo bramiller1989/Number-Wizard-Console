@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NumberWizard : MonoBehaviour
 {
-    int max = 1000;
-    int min = 1;
-    int guess = 500;
+    int max;
+    int min;
+    int guess;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,10 @@ public class NumberWizard : MonoBehaviour
 
     void StartGame()
     {
+        max = 1000;
+        min = 1;
+        guess = 500;
+
         Debug.Log("Welcome to Number Wizard");
         Debug.Log("Think of a number...");
         Debug.Log("The lowest number you can pick is: " + min);
@@ -42,6 +46,7 @@ public class NumberWizard : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Awesome, I guessed right!");
+            StartGame();
         }
     }
 
