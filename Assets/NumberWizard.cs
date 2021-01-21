@@ -11,6 +11,11 @@ public class NumberWizard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartGame();
+    }
+
+    void StartGame()
+    {
         Debug.Log("Welcome to Number Wizard");
         Debug.Log("Think of a number...");
         Debug.Log("The lowest number you can pick is: " + min);
