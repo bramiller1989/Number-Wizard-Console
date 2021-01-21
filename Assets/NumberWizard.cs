@@ -32,18 +32,22 @@ public class NumberWizard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             min = guess;
-            guess = (max + min) / 2;
-            Debug.Log("Is your number higher or lower than..." + guess + "?");
+            NextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             max = guess;
-            guess = (max + min) / 2;
-            Debug.Log("Is your number higher or lower than..." + guess + "?");
+            NextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Awesome, I guessed right!");
         }
+    }
+
+    void NextGuess()
+    {
+        guess = (max + min) / 2;
+        Debug.Log("Is your number higher or lower than..." + guess + "?");
     }
 }
